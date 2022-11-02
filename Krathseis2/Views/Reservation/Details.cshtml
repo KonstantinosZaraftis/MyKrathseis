@@ -1,0 +1,42 @@
+﻿@model Krathseis2.Models.Reservation
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <div>Reservation</div>
+    <hr />
+    <dl class="form-group">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name):
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartLocation):
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndLocation):
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndLocation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+
+    @Html.ActionLink("Back to List", "Index")
+</p>

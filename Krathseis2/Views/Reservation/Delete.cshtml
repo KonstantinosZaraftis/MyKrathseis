@@ -1,0 +1,52 @@
+﻿@model Krathseis2.Models.Reservation
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<div class="form-group">
+    <div>Reservation</div>
+    <hr />
+    <div class="form-group">
+        <div>
+            @Html.DisplayNameFor(x => x.Name):
+        </div>
+
+        <div>
+            @Html.DisplayFor(x => x.Name)
+        </div>
+
+        <div>
+            @Html.DisplayNameFor(x => x.StartLocation):
+        </div>
+
+        <div>
+            @Html.DisplayFor(x => x.StartLocation)
+        </div>
+
+        <div>
+            @Html.DisplayNameFor(x => x.EndLocation):
+
+        </div>
+
+        <div>
+            @Html.DisplayFor(x => x.EndLocation)
+        </div>
+
+    </div>
+
+    <input type="submit" value="Delete" />
+
+</div>
+
+<br />
+
+<div class="form-group">
+
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
+

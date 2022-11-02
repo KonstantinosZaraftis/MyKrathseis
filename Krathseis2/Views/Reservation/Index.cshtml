@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Krathseis2.Models.Reservation>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of  Reservations</h2>
+<br />
+
+<div> @Html.ActionLink("Create New Reservation", "Create")</div>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x => x.Name)</th>
+            <th>@Html.DisplayNameFor(x => x.StartLocation)</th>
+            <th>@Html.DisplayNameFor(x => x.EndLocation) </th>
+            <th>Actions</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(x => reservation.Name)</td>
+                <td>@Html.DisplayFor(x => reservation.StartLocation)</td>
+                <td>@Html.DisplayFor(x => reservation.EndLocation)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = reservation.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Details", "Details", new { id = reservation.Id }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Delete", "Delete", new { id = reservation.Id }, new { @class = "btn btn-danger" })
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+

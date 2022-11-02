@@ -1,0 +1,44 @@
+﻿@model Krathseis2.Models.Reservation
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Reservation</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(x => x.Name)
+
+        <div>
+            @Html.TextBoxFor(x => x.Name)
+        </div>
+    </div>
+
+
+    <div>
+        @Html.LabelFor(x => x.StartLocation)
+        <div>
+            @Html.TextBoxFor(x => x.StartLocation)
+        </div>
+
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.EndLocation)
+        <div>
+            @Html.TextBoxFor(x => x.EndLocation)
+        </div>
+    </div>
+
+    <br />
+    <div class="form-group">
+        <input type="submit" name="Save" value="Save" />
+    </div>
+
+
+    <div>
+        @Html.ActionLink("Back to Index", "Index")
+    </div>
+}
+

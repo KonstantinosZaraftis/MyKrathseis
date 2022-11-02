@@ -1,0 +1,49 @@
+﻿@model Krathseis2.Models.Reservation
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Fill in the form to Create new Reservation</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.LabelFor(x => x.Name, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.Name)
+            @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+        </div>
+
+
+
+        @Html.LabelFor(x => x.StartLocation, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.StartLocation)
+            @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+        </div>
+
+
+        @Html.LabelFor(x => x.EndLocation, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.EndLocation)
+            @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" value="Save" class="bth btn-default">
+        </div>
+
+    </div>
+
+}
+
+
+<div>
+    @Html.ActionLink("Back to Index", "Index")
+</div>

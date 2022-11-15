@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Krathseis2.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Customers</h2>
+
+<div>@Html.ActionLink("Create new Customer","Create")</div>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x=>x.Firstname)</th>
+            <th>@Html.DisplayNameFor(x=>x.LastName)</th>
+            <th>@Html.DisplayNameFor(x=>x.PhoneNumber)</th>
+            <th>@Html.DisplayNameFor(x=>x.EmailAddress)</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+
+                <td>@Html.DisplayFor(x=>customer.Firstname)</td>
+                <td>@Html.DisplayFor(x=>customer.LastName)</td>
+                <td>@Html.DisplayFor(x=>customer.PhoneNumber)</td>
+                <td>@Html.DisplayFor(x=>customer.EmailAddress)</td>
+
+                <td>@HtmlActionLink("Edit","Edit", new {id=customer.Id},new{@class="btn btn-primary" })</td>
+                <td>@HtmlActionLinl("Details", "Details", new {id=customer.Id},new { @class = "btn btn-success" })</td>
+                <td>@HtmlActionLink("Delete","Delete",new { id = customer.Id },new { @class = "btn btn-dangerous" })</td>
+            </tr>
+
+         }
+
+    </tbody>
+
+</table>

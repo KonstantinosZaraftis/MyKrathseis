@@ -1,0 +1,49 @@
+﻿@model Krathseis2.Models.Customer
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<div class="form-group">
+ <div>Reservation</div>
+    <hr/>
+    <div class="form-group">
+
+        <div>
+            @Html.DisplayNameFor(x => x.Firstname):
+        </div>
+
+        <div>
+            @Html.DisplayFor(x => x.Firstname)
+        </div>
+
+        <div>
+            @Html.DisplayNameFor(x => x.LastName):
+        </div>
+
+        <div>
+            @Html.DisplayFor(x => x.LastName)
+        </div>
+
+        <div>
+            @Html.DisplayNameFor(x => x.PhoneNumber):
+
+        </div>
+        <div>
+            @Html.DisplayFor(x => x.PhoneNumber)
+        </div>
+        <div>
+            @Html.DisplayNameFor(x => x.EmailAddress)
+        </div>
+
+        <div>@Html.DisplayFor(x => x.EmailAddress)</div>
+
+        <input type="submit" value="Delete" />
+    </div>
+
+</div>
+<div class="form-group">
+
+    @Html.ActionLink("Back to List", "Index")
+</div>

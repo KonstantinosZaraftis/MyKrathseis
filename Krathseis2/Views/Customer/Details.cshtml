@@ -1,0 +1,51 @@
+﻿@model Krathseis2.Models.Customer
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+ <div>
+     <div>Customer</div>
+     <hr />
+     <dl class="form-group">
+         <dt>
+             @Html.DisplayNameFor(model => model.Firstname):
+         </dt>
+
+         <dd>
+             @Html.DisplayFor(model => model.Firstname)
+         </dd>
+
+         <dt>
+             @Html.DisplayNameFor(model => model.LastName):
+         </dt>
+
+         <dd>
+             @Html.DisplayFor(model => model.LastName)
+         </dd>
+
+         <dt>
+             @Html.DisplayNameFor(model => model.PhoneNumber):
+         </dt>
+
+         <dd>
+             @Html.DisplayFor(model => model.PhoneNumber)
+         </dd>
+
+         <dt>
+             @Html.DisplayNameFor(model => model.EmailAddress):
+         </dt>
+
+         <dd>
+             @Html.DisplayFor(model => model.EmailAddress)
+         </dd>
+
+
+     </dl>
+
+ </div>
+ <p>
+     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+
+     @Html.ActionLink("Back to List", "Index")
+ </p>
